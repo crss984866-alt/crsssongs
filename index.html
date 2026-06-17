@@ -1,44 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="te">
 <head>
-<title>CRSS SONGS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRSS Songs | Telugu Christian Lyrics</title>
+<meta name="description" content="CRSS Songs - Telugu Christian song lyrics, worship songs, gospel songs, and lyrics by Pas. M. Joji Garu.">
+<meta name="keywords" content="CRSS Songs, Telugu Christian Songs, Telugu Christian Lyrics, Gospel Songs, Pas M Joji Garu, JOJIJM Official">
+
+<style>
+body{
+margin:0;
+font-family:Gautami, Arial, sans-serif;
+background:#fff;
+color:#222;
+}
+.dark-mode{
+background:#111;
+color:#fff;
+}
+header{
+background:#b30000;
+color:white;
+text-align:center;
+padding:25px 15px;
+}
+.logo{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid white;
+}
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+.search-box{
+width:100%;
+padding:14px;
+font-size:17px;
+border:2px solid #b30000;
+border-radius:10px;
+margin:20px 0;
+}
+.song-card{
+background:#fff;
+border:1px solid #ddd;
+border-left:6px solid #b30000;
+padding:15px;
+margin:12px 0;
+border-radius:10px;
+box-shadow:0 2px 8px #ddd;
+}
+.dark-mode .song-card{
+background:#222;
+border-color:#444;
+box-shadow:none;
+}
+.song-card a{
+text-decoration:none;
+color:#b30000;
+font-size:20px;
+font-weight:bold;
+}
+.dark-mode .song-card a{
+color:#ff6666;
+}
+.category{
+color:#b30000;
+}
+.youtube{
+display:inline-block;
+background:red;
+color:white;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+margin-top:15px;
+}
+button{
+background:#222;
+color:white;
+border:0;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+footer{
+background:#b30000;
+color:white;
+text-align:center;
+padding:18px;
+margin-top:30px;
+}
+</style>
 </head>
+
 <body>
 
+<header>
+<img src="crss-logo.jpg" class="logo" alt="CRSS Logo">
 <h1>CRSS SONGS</h1>
+<p>Telugu Christian Song Lyrics</p>
+<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</header>
 
-<h2>Songs</h2>
+<div class="container">
 
-<a href="viduvavu-yesayya.html">🎵 విడువవు యేసయ్యా</a>
-<br><br>
-<br><br>
-<a href="deshama-na-deshama.html">
-🎵 దేశమా... నా దేశమా
+<h2 class="category">🎵 Song Lyrics</h2>
+
+<input type="text" id="searchBox" class="search-box" placeholder="Search songs..." onkeyup="searchSongs()">
+
+<div class="song-card"><a href="viduvavu-yesayya.html">1. విడువవు యేసయ్యా</a></div>
+<div class="song-card"><a href="deshama-na-deshama.html">2. దేశమా... నా దేశమా</a></div>
+<div class="song-card"><a href="naa-nammakam-vammu-cheyavayya.html">3. నా నమ్మకం వమ్ము చేయవయ్య</a></div>
+<div class="song-card"><a href="urukulu-parugula-jeevitham.html">4. ఉరుకులు పరుగుల జీవితం</a></div>
+<div class="song-card"><a href="marchinavu-deva-na-jeevithamunu.html">5. మార్చినావు దేవా నా జీవితమును</a></div>
+<div class="song-card"><a href="gunavatiyaina-bharya.html">6. గుణవతియైన భార్య</a></div>
+<div class="song-card"><a href="prakatistunnava-prabhu-rakshana-suvarthanu.html">7. ప్రకటిస్తున్నావా! ప్రభు రక్షణ సువార్తను</a></div>
+<div class="song-card"><a href="erugakuntini-yesayya.html">8. ఎరుగకుంటిని యేసయ్య</a></div>
+
+<h2 class="category">📺 YouTube Channel</h2>
+<a class="youtube" href="https://www.youtube.com/@voiceofcrucifiedchrist4184" target="_blank">
+JOJIJM OFFICIAL
 </a>
-<a href="naa-nammakam-vammu-cheyavayya.html">🎵 నా నమ్మకం వమ్ము చేయవయ్య</a>
-<br><br>
 
-<a href="urukulu-parugula-jeevitham.html">🎵 ఉరుకులు పరుగుల జీవితం</a>
-<br><br>
-<br><br>
-<a href="marchinavu-deva-na-jeevithamunu.html">
-🎵 మార్చినావు దేవా నా జీవితమును
-</a>
+</div>
 
-  
-<a href="gunavatiyaina-bharya.html">🎵 గుణవతియైన భార్య</a>
-<br><br>
-<a href="prakatistunnava-prabhu-rakshana-suvarthanu.html">
-🎵 ప్రకటిస్తున్నావా! ప్రభు రక్షణ సువార్తను
-</a>
-<hr>
+<footer>
+© CRSS Songs | Christu Rajya Suvartha Sangam
+</footer>
 
-<br><br>
-<h2>📺 JOJIJM OFFICIAL YouTube Channel</h2>
+<script>
+function searchSongs(){
+let input=document.getElementById("searchBox").value.toLowerCase();
+let cards=document.getElementsByClassName("song-card");
+for(let i=0;i<cards.length;i++){
+let text=cards[i].innerText.toLowerCase();
+cards[i].style.display=text.includes(input) ? "" : "none";
+}
+}
 
-<a href="https://www.youtube.com/@voiceofcrucifiedchrist4184" target="_blank">
-Visit YouTube Channel
-</a>
+function toggleDarkMode(){
+document.body.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
