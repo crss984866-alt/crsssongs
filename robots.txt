@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crss984866-alt.github.io/crsssongs/sitemap.xml
