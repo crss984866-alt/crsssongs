@@ -1,262 +1,432 @@
-/* CRSS SONGS — PREMIUM PURPLE & GOLD DESIGN */
 
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRSS Songs | Telugu Christian Lyrics</title>
+<style>
 :root {
-  --site-primary: #17133d;
-  --site-on-primary: #ffffff;
-  --site-secondary: #f6c86a;
-  --site-on-secondary: #241a35;
-  --site-background: #f5f4ff;
-  --site-on-background: #211d3a;
-  --surface: #ffffff;
-  --muted: #77738e;
-  --border: #e5e1f4;
-  color-scheme: light;
+  --navy: #071b2b;
+  --teal: #087e78;
+  --mint: #55e6c1;
+  --bg: #f2fbfa;
+  --white: #ffffff;
+  --text: #102d35;
+  --muted: #66818a;
 }
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-  background: linear-gradient(
-    135deg,
-    #f8f6ff,
-    #f0f3ff,
-    #fff8ee
-  );
+  margin: 0;
+  font-family: Arial, "Noto Sans Telugu", sans-serif;
+  background: linear-gradient(135deg,#f2fbfa,#edf5ff,#f5fff8);
+  color: var(--text);
 }
-
-.topbar,
-footer {
-  background: #17133d;
-  color: #ffffff;
-}
-
-.nav {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.brand {
-  letter-spacing: 0.07em;
-}
-
-.logo {
-  border: 2px solid #f6c86a;
-  box-shadow: 0 0 0 5px #ffffff12;
-}
-
-.hero {
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse at 15% 15%, #5146a8, transparent 42%),
-    radial-gradient(ellipse at 90% 80%, #633d91, transparent 38%),
-    linear-gradient(135deg, #17133d, #25205b 55%, #3a2464);
-  padding-top: 76px;
-  padding-bottom: 82px;
-}
-
-.hero:after {
-  content: "✧";
-  right: 8%;
-  top: 6px;
-  font-size: 190px;
-  color: #f6c86a;
-  opacity: 0.16;
-}
-
-.eyebrow {
-  display: inline-block;
-  padding: 9px 14px;
-  border: 1px solid #ffffff30;
-  border-radius: 999px;
-  background: #ffffff0c;
-}
-
-h1 {
-  text-shadow: 0 5px 25px #09062255;
-}
-
-.searchbox {
-  border-radius: 18px;
-  padding: 8px;
-  background: #ffffff;
-  box-shadow: 0 18px 55px #08052250;
-}
-
-.searchbox input {
-  color: #211d3a;
-}
-
-.searchbox button,
-.primary-btn {
-  background: linear-gradient(135deg, #ffda83, #f2b94f);
-  color: #241a35;
-  box-shadow: 0 5px 16px #08052220;
-  transition: 0.2s;
-}
-
-.searchbox button:hover,
-.primary-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 9px 22px #08052230;
-}
-
-.chip {
-  background: #ffffff10;
-  backdrop-filter: blur(8px);
-}
-
-main {
-  padding-top: 52px;
-}
-
-.section-head h2,
-.contact-section h2 {
-  color: #211d3a;
-  letter-spacing: -0.025em;
-}
-
-.kicker {
-  color: #8b78c7;
-}
-
-.cards {
+header {
+  background: var(--navy);
+  color: white;
+  padding: 14px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
 }
-
+.brand { display:flex; align-items:center; gap:12px; font-weight:bold; }
+.logo {
+  width:54px; height:54px; border-radius:50%;
+  object-fit:cover; border:2px solid var(--mint);
+}
+.brand small { display:block; font-size:10px; margin-top:5px; letter-spacing:2px; }
+nav { display:flex; gap:16px; flex-wrap:wrap; }
+nav a { color:white; text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--mint); }
+.hero {
+  text-align:center;
+  padding:75px 20px;
+  color:white;
+  background:radial-gradient(ellipse at 15% 10%,#126b70,transparent 45%),
+  linear-gradient(130deg,#071b2b,#123c4c);
+}
+.tag {
+  color:var(--mint);
+  letter-spacing:3px;
+  font-size:12px;
+  font-weight:bold;
+}
+h1 { font-size:clamp(36px,6vw,64px); margin:20px 0; }
+.hero p { max-width:650px; margin:0 auto 25px; line-height:1.8; color:#d6eeee; }
+.search {
+  display:flex; max-width:650px; margin:auto; padding:7px;
+  border-radius:15px; background:white; gap:7px;
+}
+.search input {
+  flex:1; min-width:0; border:0; outline:0;
+  padding:14px; font-size:15px; color:#102d35;
+}
+button { cursor:pointer; }
+.search button,.btn {
+  border:0; border-radius:10px; padding:13px 18px;
+  background:var(--mint); color:#06251f; font-weight:bold;
+}
+main { max-width:1100px; padding:42px 20px; margin:auto; }
+.heading { margin-bottom:22px; }
+.heading small { color:var(--teal); letter-spacing:2px; font-weight:bold; }
+.heading h2 { margin:8px 0; font-size:30px; }
+.categories {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
+}
 .category {
-  background: #ffffffd9;
-  border: 1px solid #e6e0fa;
-  border-radius: 20px;
-  padding: 23px;
-  box-shadow: 0 8px 24px #2c20520a;
-  transition: 0.22s;
+  background:white; padding:20px; border:1px solid #d8ebe8;
+  border-radius:17px; text-align:center; cursor:pointer;
+  box-shadow:0 6px 20px #0c59600a;
 }
-
-.category:hover {
-  transform: translateY(-5px);
-  border-color: #b7a4f0;
-  box-shadow: 0 15px 32px #2c205218;
-}
-
-.cat-icon {
-  background: linear-gradient(135deg, #eee8ff, #fff0d1);
-  color: #5b459c;
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-}
-
+.category:hover { border-color:var(--teal); transform:translateY(-3px); }
+.category span { font-size:25px; display:block; margin-bottom:10px; }
 .song-list {
-  gap: 15px;
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px;
 }
-
 .song {
-  background: #ffffffeb;
-  border: 1px solid #e7e3f5;
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 7px 22px #24184a0a;
-  transition: 0.2s;
+  display:flex; align-items:center; gap:12px; min-width:0;
+  padding:17px; background:white; border:1px solid #d8ebe8;
+  border-radius:15px; box-shadow:0 5px 20px #0c596008;
 }
-
-.song:hover {
-  transform: translateY(-3px);
-  border-color: #c5b5f1;
-  box-shadow: 0 14px 30px #24184a14;
+.song-icon {
+  width:42px; height:42px; flex-shrink:0;
+  display:grid; place-items:center; border-radius:12px;
+  background:var(--navy); color:var(--mint); font-size:20px;
 }
-
-.song-mark {
-  background: linear-gradient(145deg, #29215f, #6950a9);
-  box-shadow: 0 5px 12px #29215f25;
+.song-info { flex:1; min-width:0; }
+.song-info strong { display:block; line-height:1.6; }
+.song-info small { display:block; margin-top:5px; color:var(--muted); }
+.lyrics-btn {
+  padding:9px 11px; border:1px solid #d8ebe8;
+  border-radius:9px; background:#f1fffb; color:var(--teal);
+  font-weight:bold; white-space:nowrap;
 }
-
-.song-info strong {
-  color: #272044;
-  font-size: 15px;
-}
-
-.open-song {
-  border-color: #ddd5f2;
-  color: #493581;
-  background: #f7f4ff;
-  font-weight: 800;
-  transition: 0.2s;
-}
-
-.open-song:hover {
-  background: #29215f;
-  color: #ffffff;
-}
-
+.empty { display:none; padding:25px; text-align:center; }
 .banner {
-  background:
-    radial-gradient(circle at 90% 0%, #6752a8, transparent 38%),
-    linear-gradient(120deg, #17133d, #30245f);
-  box-shadow: 0 16px 38px #21174a20;
+  margin-top:35px; background:var(--navy); color:white;
+  padding:28px; border-radius:18px; line-height:1.7;
 }
-
-.contact-section {
-  background: #ffffffdb;
-  border-color: #e6e0f5;
-  box-shadow: 0 12px 32px #24184a0b;
+.contact {
+  margin-top:35px; padding:25px; background:white;
+  border:1px solid #d8ebe8; border-radius:18px;
 }
-
-.contact-item {
-  background: #fbfaff;
-  border-color: #e7e1f6;
-  transition: 0.2s;
+.contact-grid {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px;
 }
-
-.contact-item:hover {
-  border-color: #b7a4f0;
-  transform: translateY(-2px);
+.contact-item { background:#f7fffd; padding:16px; border-radius:12px; }
+.contact-item a { color:var(--teal); overflow-wrap:anywhere; }
+footer {
+  text-align:center; padding:24px; background:var(--navy); color:#c8e8e7;
 }
-
-.contact-item a {
-  color: #574094;
-  font-weight: 650;
-}
-
 .modal {
-  backdrop-filter: blur(7px);
+  display:none; position:fixed; inset:0; z-index:10;
+  background:#061a2bdd; padding:18px;
+  align-items:center; justify-content:center;
 }
-
+.modal.show { display:flex; }
 .modal-card {
-  border: 1px solid #e7e0fa;
-  box-shadow: 0 25px 80px #09062255;
+  width:100%; max-width:650px; max-height:85vh; overflow:auto;
+  padding:24px; border-radius:18px; background:white; color:#102d35;
 }
-
-.close {
-  background: #f3efff;
-  color: #33265f;
+.modal-head { display:flex; justify-content:space-between; gap:12px; }
+.modal-head h2 { margin-top:0; }
+.close { border:0; border-radius:8px; padding:10px; background:#e3faf3; }
+.lyrics { white-space:pre-wrap; line-height:2; padding-top:12px; }
+@media(max-width:750px) {
+  .categories { grid-template-columns:repeat(2,1fr); }
+  .song-list { grid-template-columns:1fr; }
+  header { justify-content:center; }
+  nav { justify-content:center; }
 }
-
-@media (max-width: 800px) {
-  .hero {
-    padding-top: 54px;
-    padding-bottom: 60px;
-  }
-
-  .hero:after {
-    font-size: 120px;
-    right: 1%;
-  }
+@media(max-width:480px) {
+  .hero { padding:48px 15px; }
+  .search { flex-direction:column; background:transparent; }
+  .search input { border-radius:10px; min-height:48px; }
+  .search button { min-height:45px; }
+  .contact-grid { grid-template-columns:1fr; }
+  .song { padding:12px; }
+  .lyrics-btn { padding:8px; }
 }
+</style>
+</head>
+<body>
 
-@media (max-width: 480px) {
-  .hero {
-    padding-top: 42px;
-    padding-bottom: 48px;
-  }
+<header>
+  <div class="brand">
+    <img class="logo" src="my%20lodo.jpeg" alt="Church logo"
+      onerror="this.style.display='none'">
+    <div>CRSS SONGS<small>TELUGU CHRISTIAN LYRICS</small></div>
+  </div>
+  <nav>
+    <a href="#songs">Songs</a>
+    <a href="#categories">Categories</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  .category {
-    padding: 17px;
-  }
+<section class="hero">
+  <div class="tag">SING • WORSHIP • PRAISE</div>
+  <h1>Every Song Brings<br>Us Closer to Worship</h1>
+  <p>తెలుగు క్రైస్తవ పాటల సాహిత్యం కోసం CRSS Songs కు స్వాగతం.
+  మీకు ఇష్టమైన పాటలను వెతకండి, చదవండి, ఆరాధించండి.</p>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search Telugu song lyrics...">
+    <button onclick="searchSongs()">Search Songs →</button>
+  </div>
+</section>
 
-  .song {
-    padding: 14px;
-  }
+<main>
+  <section id="categories">
+    <div class="heading">
+      <small>EXPLORE</small>
+      <h2>Song Categories</h2>
+    </div>
+    <div class="categories">
+      <button class="category" onclick="quickSearch('ఆరాధన')"><span>♫</span>ఆరాధన గీతాలు</button>
+      <button class="category" onclick="quickSearch('స్తుతి')"><span>✧</span>స్తుతి గీతాలు</button>
+      <button class="category" onclick="quickSearch('ప్రార్థన')"><span>🙏</span>ప్రార్థన గీతాలు</button>
+      <button class="category" onclick="quickSearch('క్రిస్మస్')"><span>✦</span>క్రిస్మస్ గీతాలు</button>
+    </div>
+  </section>
 
-  .song-mark {
-    flex-basis: 38px;
-    height: 38px;
-  }
+  <section id="songs" style="margin-top:42px">
+    <div class="heading">
+      <small>CRSS SONGS LIBRARY</small>
+      <h2>Telugu Christian Songs</h2>
+      <p id="count">11 songs</p>
+    </div>
+
+    <div class="song-list" id="song-list">
+      <article class="song" data-search="విడువవు యేసయ్యా నను మరువవు యేసయ్యా యేసయ్యా">
+        <div class="song-icon">♫</div><div class="song-info">
+        <strong>విడువవు యేసయ్యా – నను మరువవు యేసయ్యా</strong>
+        <small>Viduvavu Yesayya</small></div>
+        <button class="lyrics-btn" onclick="openSong('viduvavu')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="దేశమా నా దేశమా">
+        <div class="song-icon">✧</div><div class="song-info">
+        <strong>దేశమా నా దేశమా</strong><small>Deshama Naa Deshama</small></div>
+        <button class="lyrics-btn" onclick="openSong('deshama')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="నా నమ్మకం వమ్ము చేయవయ్యా నమ్మకం యేసయ్యా ధైర్యము">
+        <div class="song-icon">♡</div><div class="song-info">
+        <strong>నా నమ్మకం వమ్ము చేయవయ్యా</strong>
+        <small>Naa Nammakam Vammu Cheyavayya</small></div>
+        <button class="lyrics-btn" onclick="openSong('nammakam')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="ఉరుకులు పరుగుల జీవితం పరలోకం">
+        <div class="song-icon">☼</div><div class="song-info">
+        <strong>ఉరుకులు పరుగుల జీవితం</strong>
+        <small>Urukulu Parugula Jeevitham</small></div>
+        <button class="lyrics-btn" onclick="openSong('urukulu')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="మార్చినావు దేవా నా జీవితమును">
+        <div class="song-icon">♫</div><div class="song-info">
+        <strong>మార్చినావు దేవా నా జీవితమును</strong>
+        <small>Marchinavu Deva</small></div>
+        <button class="lyrics-btn" onclick="openSong('marchinavu')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="గుణవతి అయిన భార్య గుణవతి">
+        <div class="song-icon">✦</div><div class="song-info">
+        <strong>గుణవతి అయిన భార్య</strong><small>Gunavathi Ayina Bharya</small></div>
+        <button class="lyrics-btn" onclick="openSong('gunavathi')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్త">
+        <div class="song-icon">✝</div><div class="song-info">
+        <strong>ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్త</strong>
+        <small>Prakatisthunnava Prabhu</small></div>
+        <button class="lyrics-btn" onclick="openSong('prakatisthunnava')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="ఎరుగకుంటిని యేసయ్యా">
+        <div class="song-icon">♫</div><div class="song-info">
+        <strong>ఎరుగకుంటిని యేసయ్యా</strong><small>Erugakuntini Yesayya</small></div>
+        <button class="lyrics-btn" onclick="openSong('erugakuntini')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="ఏలా మరువగలను నీ మేలులను">
+        <div class="song-icon">♡</div><div class="song-info">
+        <strong>ఏలా మరువగలను నీ మేలులను</strong>
+        <small>Ela Maruvagalanu</small></div>
+        <button class="lyrics-btn" onclick="openSong('ela')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="లోకానేలే లోకనాథుడు క్రిస్మస్">
+        <div class="song-icon">✦</div><div class="song-info">
+        <strong>లోకానేలే లోకనాథుడు</strong><small>Lokanele Loka Nathudu</small></div>
+        <button class="lyrics-btn" onclick="openSong('lokanele')">Lyrics</button>
+      </article>
+
+      <article class="song" data-search="జన్మించినాడు ప్రభువైన యేసు క్రిస్మస్">
+        <div class="song-icon">✧</div><div class="song-info">
+        <strong>జన్మించినాడు ప్రభువైన యేసు</strong>
+        <small>Janminchinadu Prabhuvaina Yesu</small></div>
+        <button class="lyrics-btn" onclick="openSong('janminchinadu')">Lyrics</button>
+      </article>
+
+      <div class="empty" id="empty">No songs found. Try another search.</div>
+    </div>
+  </section>
+
+  <section class="banner" id="about">
+    <h2>Welcome to CRSS Songs</h2>
+    <p>A growing collection of Telugu Christian songs for worship, praise and prayer.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="heading"><small>STAY CONNECTED</small><h2>Connect with CRSS</h2></div>
+    <div class="contact-grid">
+      <div class="contact-item"><strong>YouTube</strong><br>
+        <a href="https://www.youtube.com/results?search_query=jojijm+official" target="_blank" rel="noopener">jojijm official ↗</a>
+      </div>
+      <div class="contact-item"><strong>Instagram</strong><br>
+        <a href="https://www.instagram.com/jojijm_official/" target="_blank" rel="noopener">@jojijm_official ↗</a>
+      </div>
+      <div class="contact-item"><strong>Contact number</strong><br>
+        <a href="tel:9392990562">9392990562</a>
+      </div>
+      <div class="contact-item"><strong>Additional contact</strong><br>
+        <a href="tel:6301261514">6301261514</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 CRSS Songs · Telugu Christian Lyrics · Sing with faith ♡</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeSong()">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="modal-title">Song lyrics</h2>
+      <button class="close" onclick="closeSong()">Close ✕</button>
+    </div>
+    <div class="lyrics" id="lyrics"></div>
+  </div>
+</div>
+
+<script>
+const songLyrics = {
+viduvavu: `విడువవు యేసయ్యా – నను మరువవు యేసయ్యా
+
+కాలాలు మారినాగాని – యుగాలు గడిచిన గాని
+ఎందరూ నన్ను విడిచినా – నా వారే మరిచినా
+విడువలేదు నీ కృప – మరువలేదు నీ కరుణా
+
+|| విడువవు యేసయ్యా ||
+
+పూర్తి పాట సాహిత్యాన్ని ఇక్కడ మీకు కావలసిన విధంగా చేర్చండి.`,
+
+deshama: `దేశమా... దేశమా... నా దేశమా
+దేవుని మాట వినుమా
+
+నేస్తమా... నేస్తమా... నా నేస్తమా
+దేవునికి లోబడుమా
+
+పూర్తి పాట సాహిత్యాన్ని ఇక్కడ చేర్చండి.`,
+
+nammakam: `నా నమ్మకం వమ్ము చేయవయ్య
+నీవే నా ధైర్యమయ్యా
+
+నా నమ్మకం నీవే యేసయ్యా!
+నా ధైర్యము నీవే యేసయ్యా!
+నా బలము నీవే యేసయ్యా!
+నా విజయము నీవే యేసయ్యా!`,
+
+urukulu: `ఉరుకులు పరుగుల జీవితం అయినా
+అది క్షణ భంగురం
+
+ఉన్నది నీకై పరలోకం
+నిలువరమైనది ఆలోకం
+
+విన్నావంటే ప్రభుమాట
+ఆనందంతో ఆరాధించు.`,
+
+marchinavu: `మార్చినావు దేవా నా జీవితమును
+ఓర్చినావు ప్రభువా నాకై శ్రమలు
+
+కార్చినావు దేవా నాకై రుధిరము
+చేసినావు నీదు ప్రాణ త్యాగము`,
+
+gunavathi: `గుణవతియైన భార్య దొరుకుట అరుదు
+సౌందర్యవంతులెందరినో మించిన మెరుగు
+
+ఇది మనుష్యుని కార్యము కాదు
+దేవుని వరమే.`,
+
+prakatisthunnava: `ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్తను
+నిదురిస్తున్నావా నీ భారమును మరచి
+
+ప్రభు రాకడ ఘడియలు మారుమ్రోగుచుండగా
+ప్రభు సేవలో సిద్ధపడుమా.`,
+
+erugakuntini: `ఎరుగకుంటిని యేసయ్యా
+ఎంతగా నిను ద్వేషించితినో
+అంతగా నను ప్రేమించితివే యేసయ్యా
+
+మరువలేను యేసయ్యా నీ ప్రేమను.`,
+
+ela: `ఎలా మరువ గలను నీ మేలులన్
+ఎలా తీర్చగలను నీ ఋణమును
+
+నా యేసయ్య నీదు కృపను
+నీ మేలులను తలపోయుదున్.`,
+
+lokanele: `లోకాలనేలే లోక నాథుడు
+రాజ్యాల నేలే రారాజుడు
+
+జన్మించెను ఈ జగతిలోన
+పాలించెను పశువుల పాకనా.`,
+
+janminchinadu: `జన్మించినాడు ప్రభువైన యేసు
+భువిలోన మహారాజుగా
+
+ఉదయించినాడు కాపరి దైవం
+నా హృదయ రారాజుగా.`
+};
+
+function searchSongs() {
+  const q = document.getElementById('search').value.trim().toLocaleLowerCase();
+  let count = 0;
+  document.querySelectorAll('.song').forEach(song => {
+    const match = !q || (song.dataset.search + ' ' + song.innerText)
+      .toLocaleLowerCase().includes(q);
+    song.style.display = match ? 'flex' : 'none';
+    if (match) count++;
+  });
+  document.getElementById('empty').style.display = count ? 'none' : 'block';
+  document.getElementById('count').textContent = count + ' songs';
 }
+function quickSearch(q) {
+  document.getElementById('search').value = q;
+  searchSongs();
+  document.getElementById('songs').scrollIntoView({behavior:'smooth'});
+}
+function openSong(key) {
+  const song = document.querySelector('[onclick="openSong(\\'' + key + '\\')"]');
+  document.getElementById('modal-title').textContent =
+    song ? song.closest('.song').querySelector('strong').innerText : 'Song Lyrics';
+  document.getElementById('lyrics').textContent = songLyrics[key] || 'Lyrics will be added soon.';
+  document.getElementById('modal').classList.add('show');
+}
+function closeSong() {
+  document.getElementById('modal').classList.remove('show');
+}
+document.getElementById('search').addEventListener('input', searchSongs);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeSong();
+  if (e.key === 'Enter' && document.activeElement.id === 'search') searchSongs();
+});
+</script>
+</body>
+</html>
