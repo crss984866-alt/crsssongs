@@ -173,32 +173,20 @@ footer {
   <div class="tag">SING • WORSHIP • PRAISE</div>
   <h1>Every Song Brings<br>Us Closer to Worship</h1>
   <p>తెలుగు క్రైస్తవ పాటల సాహిత్యం కోసం CRSS Songs కు స్వాగతం.
-  మీకు ఇష్టమైన పాటలను వెతకండి, చదవండి, ఆరాధించండి.</p>
+  </p>
   <div class="search">
     <input id="search" type="search" placeholder="Search Telugu song lyrics...">
     <button onclick="searchSongs()">Search Songs →</button>
   </div>
 </section>
 
-<main>
-  <section id="categories">
-    <div class="heading">
-      <small>EXPLORE</small>
-      <h2>Song Categories</h2>
-    </div>
-    <div class="categories">
-      <button class="category" onclick="quickSearch('ఆరాధన')"><span>♫</span>ఆరాధన గీతాలు</button>
-      <button class="category" onclick="quickSearch('స్తుతి')"><span>✧</span>స్తుతి గీతాలు</button>
-      <button class="category" onclick="quickSearch('ప్రార్థన')"><span>🙏</span>ప్రార్థన గీతాలు</button>
-      <button class="category" onclick="quickSearch('క్రిస్మస్')"><span>✦</span>క్రిస్మస్ గీతాలు</button>
-    </div>
-  </section>
+
 
   <section id="songs" style="margin-top:42px">
     <div class="heading">
       <small>CRSS SONGS LIBRARY</small>
       <h2>Telugu Christian Songs</h2>
-      <p id="count">11 songs</p>
+      <p id="count">12 songs</p>
     </div>
 
     <div class="song-list" id="song-list">
@@ -206,14 +194,96 @@ footer {
         <div class="song-icon">♫</div><div class="song-info">
         <strong>విడువవు యేసయ్యా – నను మరువవు యేసయ్యా</strong>
         <small>Viduvavu Yesayya</small></div>
-        <button class="lyrics-btn" onclick="openSong('viduvavu')">Lyrics</button>
-      </article>
+       
+/* Fix all CRSS Songs Lyrics buttons */
+document.addEventListener("click", function (event) {
+  const link = event.target.closest(".open-song");
+
+  if (!link) return;
+
+  const card = link.closest(".song");
+  if (!card) return;
+
+  event.preventDefault();
+
+  const titleElement = card.querySelector(".song-info strong");
+  const title = titleElement
+    ? titleElement.textContent.trim()
+    : "Song Lyrics";
+
+  // Find the function named in the button's onclick attribute
+  const onclickCode = link.getAttribute("onclick") || "";
+  const match = onclickCode.match(
+    /(open[A-Za-z0-9_]+)\s*\(/
+  );
+
+  if (match) {
+    const functionName = match[1];
+    const songFunction = window[functionName];
+
+    if (typeof songFunction === "function") {
+      songFunction();
+      return;
+    }
+  }
+
+  // Fallback: open the lyrics popup
+  if (typeof window.showLyrics === "function") {
+    window.showLyrics(title, "");
+  } else if (typeof window.openSong === "function") {
+    window.openSong(title);
+  } else {
+    alert("Lyrics popup could not open. Please check the JavaScript code.");
+  }
+});
+
 
       <article class="song" data-search="దేశమా నా దేశమా">
         <div class="song-icon">✧</div><div class="song-info">
         <strong>దేశమా నా దేశమా</strong><small>Deshama Naa Deshama</small></div>
-        <button class="lyrics-btn" onclick="openSong('deshama')">Lyrics</button>
-      </article>
+        
+/* Fix all CRSS Songs Lyrics buttons */
+document.addEventListener("click", function (event) {
+  const link = event.target.closest(".open-song");
+
+  if (!link) return;
+
+  const card = link.closest(".song");
+  if (!card) return;
+
+  event.preventDefault();
+
+  const titleElement = card.querySelector(".song-info strong");
+  const title = titleElement
+    ? titleElement.textContent.trim()
+    : "Song Lyrics";
+
+  // Find the function named in the button's onclick attribute
+  const onclickCode = link.getAttribute("onclick") || "";
+  const match = onclickCode.match(
+    /(open[A-Za-z0-9_]+)\s*\(/
+  );
+
+  if (match) {
+    const functionName = match[1];
+    const songFunction = window[functionName];
+
+    if (typeof songFunction === "function") {
+      songFunction();
+      return;
+    }
+  }
+
+  // Fallback: open the lyrics popup
+  if (typeof window.showLyrics === "function") {
+    window.showLyrics(title, "");
+  } else if (typeof window.openSong === "function") {
+    window.openSong(title);
+  } else {
+    alert("Lyrics popup could not open. Please check the JavaScript code.");
+  }
+});
+
 
       <article class="song" data-search="నా నమ్మకం వమ్ము చేయవయ్యా నమ్మకం యేసయ్యా ధైర్యము">
         <div class="song-icon">♡</div><div class="song-info">
@@ -226,28 +296,190 @@ footer {
         <div class="song-icon">☼</div><div class="song-info">
         <strong>ఉరుకులు పరుగుల జీవితం</strong>
         <small>Urukulu Parugula Jeevitham</small></div>
-        <button class="lyrics-btn" onclick="openSong('urukulu')">Lyrics</button>
-      </article>
+       
+/* Fix all CRSS Songs Lyrics buttons */
+document.addEventListener("click", function (event) {
+  const link = event.target.closest(".open-song");
+
+  if (!link) return;
+
+  const card = link.closest(".song");
+  if (!card) return;
+
+  event.preventDefault();
+
+  const titleElement = card.querySelector(".song-info strong");
+  const title = titleElement
+    ? titleElement.textContent.trim()
+    : "Song Lyrics";
+
+  // Find the function named in the button's onclick attribute
+  const onclickCode = link.getAttribute("onclick") || "";
+  const match = onclickCode.match(
+    /(open[A-Za-z0-9_]+)\s*\(/
+  );
+
+  if (match) {
+    const functionName = match[1];
+    const songFunction = window[functionName];
+
+    if (typeof songFunction === "function") {
+      songFunction();
+      return;
+    }
+  }
+
+  // Fallback: open the lyrics popup
+  if (typeof window.showLyrics === "function") {
+    window.showLyrics(title, "");
+  } else if (typeof window.openSong === "function") {
+    window.openSong(title);
+  } else {
+    alert("Lyrics popup could not open. Please check the JavaScript code.");
+  }
+});
 
       <article class="song" data-search="మార్చినావు దేవా నా జీవితమును">
         <div class="song-icon">♫</div><div class="song-info">
         <strong>మార్చినావు దేవా నా జీవితమును</strong>
         <small>Marchinavu Deva</small></div>
-        <button class="lyrics-btn" onclick="openSong('marchinavu')">Lyrics</button>
-      </article>
+        
+/* Fix all CRSS Songs Lyrics buttons */
+document.addEventListener("click", function (event) {
+  const link = event.target.closest(".open-song");
+
+  if (!link) return;
+
+  const card = link.closest(".song");
+  if (!card) return;
+
+  event.preventDefault();
+
+  const titleElement = card.querySelector(".song-info strong");
+  const title = titleElement
+    ? titleElement.textContent.trim()
+    : "Song Lyrics";
+
+  // Find the function named in the button's onclick attribute
+  const onclickCode = link.getAttribute("onclick") || "";
+  const match = onclickCode.match(
+    /(open[A-Za-z0-9_]+)\s*\(/
+  );
+
+  if (match) {
+    const functionName = match[1];
+    const songFunction = window[functionName];
+
+    if (typeof songFunction === "function") {
+      songFunction();
+      return;
+    }
+  }
+
+  // Fallback: open the lyrics popup
+  if (typeof window.showLyrics === "function") {
+    window.showLyrics(title, "");
+  } else if (typeof window.openSong === "function") {
+    window.openSong(title);
+  } else {
+    alert("Lyrics popup could not open. Please check the JavaScript code.");
+  }
+});
+
 
       <article class="song" data-search="గుణవతి అయిన భార్య గుణవతి">
         <div class="song-icon">✦</div><div class="song-info">
         <strong>గుణవతి అయిన భార్య</strong><small>Gunavathi Ayina Bharya</small></div>
-        <button class="lyrics-btn" onclick="openSong('gunavathi')">Lyrics</button>
-      </article>
+        
+/* Fix all CRSS Songs Lyrics buttons */
+document.addEventListener("click", function (event) {
+  const link = event.target.closest(".open-song");
+
+  if (!link) return;
+
+  const card = link.closest(".song");
+  if (!card) return;
+
+  event.preventDefault();
+
+  const titleElement = card.querySelector(".song-info strong");
+  const title = titleElement
+    ? titleElement.textContent.trim()
+    : "Song Lyrics";
+
+  // Find the function named in the button's onclick attribute
+  const onclickCode = link.getAttribute("onclick") || "";
+  const match = onclickCode.match(
+    /(open[A-Za-z0-9_]+)\s*\(/
+  );
+
+  if (match) {
+    const functionName = match[1];
+    const songFunction = window[functionName];
+
+    if (typeof songFunction === "function") {
+      songFunction();
+      return;
+    }
+  }
+
+  // Fallback: open the lyrics popup
+  if (typeof window.showLyrics === "function") {
+    window.showLyrics(title, "");
+  } else if (typeof window.openSong === "function") {
+    window.openSong(title);
+  } else {
+    alert("Lyrics popup could not open. Please check the JavaScript code.");
+  }
+});
 
       <article class="song" data-search="ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్త">
         <div class="song-icon">✝</div><div class="song-info">
         <strong>ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్త</strong>
         <small>Prakatisthunnava Prabhu</small></div>
-        <button class="lyrics-btn" onclick="openSong('prakatisthunnava')">Lyrics</button>
-      </article>
+        
+/* Fix all CRSS Songs Lyrics buttons */
+document.addEventListener("click", function (event) {
+  const link = event.target.closest(".open-song");
+
+  if (!link) return;
+
+  const card = link.closest(".song");
+  if (!card) return;
+
+  event.preventDefault();
+
+  const titleElement = card.querySelector(".song-info strong");
+  const title = titleElement
+    ? titleElement.textContent.trim()
+    : "Song Lyrics";
+
+  // Find the function named in the button's onclick attribute
+  const onclickCode = link.getAttribute("onclick") || "";
+  const match = onclickCode.match(
+    /(open[A-Za-z0-9_]+)\s*\(/
+  );
+
+  if (match) {
+    const functionName = match[1];
+    const songFunction = window[functionName];
+
+    if (typeof songFunction === "function") {
+      songFunction();
+      return;
+    }
+  }
+
+  // Fallback: open the lyrics popup
+  if (typeof window.showLyrics === "function") {
+    window.showLyrics(title, "");
+  } else if (typeof window.openSong === "function") {
+    window.openSong(title);
+  } else {
+    alert("Lyrics popup could not open. Please check the JavaScript code.");
+  }
+});
+
 
       <article class="song" data-search="ఎరుగకుంటిని యేసయ్యా">
         <div class="song-icon">♫</div><div class="song-info">
