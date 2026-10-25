@@ -1,663 +1,572 @@
-
 <!doctype html>
-<html lang="te">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRSS Songs | Telugu Christian Lyrics</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRSS Songs — Telugu Christian Lyrics</title>
 <style>
 :root {
-  --navy: #071b2b;
-  --teal: #087e78;
-  --mint: #55e6c1;
-  --bg: #f2fbfa;
-  --white: #ffffff;
-  --text: #102d35;
-  --muted: #66818a;
+  --site-primary:#071b2b;
+  --site-on-primary:#f5fdff;
+  --site-secondary:#55e6c1;
+  --site-background:#f2fbfa;
+  --site-on-background:#102d35;
+  --surface:#ffffff;
+  --muted:#66818a;
+  --border:#d6ebe8;
+  font-family:Arial, sans-serif;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Arial, "Noto Sans Telugu", sans-serif;
-  background: linear-gradient(135deg,#f2fbfa,#edf5ff,#f5fff8);
-  color: var(--text);
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(135deg,#f2fbfa,#edf5ff,#f5fff8);color:var(--site-on-background)}
+a{color:inherit}
+.topbar{background:#071b2b;color:white}
+.nav{max-width:1160px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.06em}
+.logo{width:54px;height:54px;flex-shrink:0;overflow:hidden;border-radius:50%;background:#55e6c1;display:grid;place-items:center;border:2px solid white;color:#06251f;font-size:23px}
+.logo img{width:100%;height:100%;object-fit:cover}
+.brand small{display:block;font-size:10px;letter-spacing:.15em;margin-top:4px}
+.navlinks{display:flex;align-items:center;gap:20px}
+.navlinks a{text-decoration:none}
+.navbtn{border:1px solid #ffffff60;padding:10px 14px;border-radius:999px;background:transparent;color:white;cursor:pointer}
+.hero{background:radial-gradient(ellipse at 12% 15%,#126b70,transparent 42%),radial-gradient(ellipse at 92% 80%,#244f91,transparent 40%),linear-gradient(130deg,#071b2b,#123c4c);color:white;text-align:center;padding:70px 20px 75px;position:relative;overflow:hidden}
+.hero-inner{max-width:900px;margin:auto;position:relative}
+.eyebrow{display:inline-block;color:#75f0d0;border:1px solid #75f0d044;border-radius:999px;padding:9px 15px;font-size:12px;font-weight:bold;letter-spacing:.18em}
+h1,h2,h3{font-family:Georgia,serif}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.08;margin:22px 0}
+.hero p{max-width:650px;margin:0 auto 28px;color:#d7e8ed;line-height:1.8}
+.searchbox{display:flex;gap:8px;max-width:690px;margin:auto;padding:8px;background:white;border-radius:16px;box-shadow:0 20px 55px #061a2b40}
+.searchbox input{min-width:0;flex:1;border:0;outline:0;padding:14px;color:#102d35;font-size:15px}
+.searchbox button,.primary-btn{background:linear-gradient(135deg,#7af2d3,#43d6b1);color:#06251f;border:0;border-radius:11px;padding:12px 18px;font-weight:bold;cursor:pointer}
+.quick{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:18px}
+.chip{background:#ffffff10;color:white;border:1px solid #75f0d044;border-radius:999px;padding:8px 13px;cursor:pointer}
+main{max-width:1160px;margin:auto;padding:48px 24px 65px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:20px}
+.section-head h2{margin:7px 0 0;font-size:30px}
+.kicker{font-size:11px;color:#168b81;text-transform:uppercase;letter-spacing:.16em;font-weight:bold}
+.song-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.song{display:flex;align-items:center;gap:13px;padding:17px;background:#ffffffed;border:1px solid var(--border);border-radius:17px;min-width:0;box-shadow:0 7px 22px #0c59600a;transition:.2s}
+.song:hover{transform:translateY(-3px);border-color:#55cdb2}
+.song-mark{width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:linear-gradient(145deg,#087e78,#245c91);display:grid;place-items:center;color:white;font-size:20px}
+.song-info{min-width:0;flex:1}
+.song-info strong{display:block;font-size:14px;line-height:1.5}
+.song-info small{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+.open-song{white-space:nowrap;text-decoration:none;border:1px solid #d0e9e4;background:#f1fffb;color:#087e78;border-radius:10px;padding:9px 11px;font-size:12px;font-weight:bold;cursor:pointer}
+.open-song:hover{background:#087e78;color:white}
+.empty{display:none;grid-column:1/-1;text-align:center;padding:28px;border:1px dashed var(--border);border-radius:15px;color:var(--muted)}
+.banner{margin-top:38px;padding:28px;background:radial-gradient(circle at 90% 0%,#176f7b,transparent 40%),linear-gradient(120deg,#071b2b,#104451);border-radius:20px;color:white;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.banner h3{font-size:25px;margin:0 0 8px}
+.banner p{color:#d0e7e8;font-size:13px;line-height:1.7;margin:0}
+.contact-section{margin-top:38px;padding:26px;background:#ffffffdf;border:1px solid var(--border);border-radius:18px}
+.contact-section h2{margin:0 0 8px}
+.contact-section p{color:var(--muted);font-size:13px;line-height:1.7}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.contact-item{padding:15px;border:1px solid var(--border);border-radius:12px;background:#f8fffd}
+.contact-item strong{display:block;margin-bottom:7px}
+.contact-item a{color:#087e78;font-weight:bold;overflow-wrap:anywhere}
+.contact-item small{display:block;color:var(--muted);margin-top:5px}
+footer{background:#071b2b;color:#c8e8e7;text-align:center;padding:24px;font-size:12px}
+.modal{display:none;position:fixed;inset:0;z-index:10;background:#071b2bcc;backdrop-filter:blur(6px);padding:18px;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-card{max-width:680px;width:100%;max-height:88vh;overflow:auto;background:white;color:#102d35;border-radius:20px;padding:25px;box-shadow:0 25px 80px #0005}
+.modal-head{display:flex;align-items:start;justify-content:space-between;gap:15px}
+.modal-head h2{margin:0;font-size:25px}
+.close{border:0;background:#e3faf3;color:#07574f;border-radius:9px;padding:9px 12px;cursor:pointer}
+.lyric-note{font-size:12px;color:var(--muted)}
+.lyric-placeholder{margin-top:16px;padding:18px;background:#f1fffb;border-radius:12px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:800px){
+ .navlinks a:not(.navbtn){display:none}
+ .song-list{grid-template-columns:1fr}
+ .hero{padding:50px 18px}
 }
-header {
-  background: var(--navy);
-  color: white;
-  padding: 14px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.brand { display:flex; align-items:center; gap:12px; font-weight:bold; }
-.logo {
-  width:54px; height:54px; border-radius:50%;
-  object-fit:cover; border:2px solid var(--mint);
-}
-.brand small { display:block; font-size:10px; margin-top:5px; letter-spacing:2px; }
-nav { display:flex; gap:16px; flex-wrap:wrap; }
-nav a { color:white; text-decoration:none; font-size:14px; }
-nav a:hover { color:var(--mint); }
-.hero {
-  text-align:center;
-  padding:75px 20px;
-  color:white;
-  background:radial-gradient(ellipse at 15% 10%,#126b70,transparent 45%),
-  linear-gradient(130deg,#071b2b,#123c4c);
-}
-.tag {
-  color:var(--mint);
-  letter-spacing:3px;
-  font-size:12px;
-  font-weight:bold;
-}
-h1 { font-size:clamp(36px,6vw,64px); margin:20px 0; }
-.hero p { max-width:650px; margin:0 auto 25px; line-height:1.8; color:#d6eeee; }
-.search {
-  display:flex; max-width:650px; margin:auto; padding:7px;
-  border-radius:15px; background:white; gap:7px;
-}
-.search input {
-  flex:1; min-width:0; border:0; outline:0;
-  padding:14px; font-size:15px; color:#102d35;
-}
-button { cursor:pointer; }
-.search button,.btn {
-  border:0; border-radius:10px; padding:13px 18px;
-  background:var(--mint); color:#06251f; font-weight:bold;
-}
-main { max-width:1100px; padding:42px 20px; margin:auto; }
-.heading { margin-bottom:22px; }
-.heading small { color:var(--teal); letter-spacing:2px; font-weight:bold; }
-.heading h2 { margin:8px 0; font-size:30px; }
-.categories {
-  display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
-}
-.category {
-  background:white; padding:20px; border:1px solid #d8ebe8;
-  border-radius:17px; text-align:center; cursor:pointer;
-  box-shadow:0 6px 20px #0c59600a;
-}
-.category:hover { border-color:var(--teal); transform:translateY(-3px); }
-.category span { font-size:25px; display:block; margin-bottom:10px; }
-.song-list {
-  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px;
-}
-.song {
-  display:flex; align-items:center; gap:12px; min-width:0;
-  padding:17px; background:white; border:1px solid #d8ebe8;
-  border-radius:15px; box-shadow:0 5px 20px #0c596008;
-}
-.song-icon {
-  width:42px; height:42px; flex-shrink:0;
-  display:grid; place-items:center; border-radius:12px;
-  background:var(--navy); color:var(--mint); font-size:20px;
-}
-.song-info { flex:1; min-width:0; }
-.song-info strong { display:block; line-height:1.6; }
-.song-info small { display:block; margin-top:5px; color:var(--muted); }
-.lyrics-btn {
-  padding:9px 11px; border:1px solid #d8ebe8;
-  border-radius:9px; background:#f1fffb; color:var(--teal);
-  font-weight:bold; white-space:nowrap;
-}
-.empty { display:none; padding:25px; text-align:center; }
-.banner {
-  margin-top:35px; background:var(--navy); color:white;
-  padding:28px; border-radius:18px; line-height:1.7;
-}
-.contact {
-  margin-top:35px; padding:25px; background:white;
-  border:1px solid #d8ebe8; border-radius:18px;
-}
-.contact-grid {
-  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px;
-}
-.contact-item { background:#f7fffd; padding:16px; border-radius:12px; }
-.contact-item a { color:var(--teal); overflow-wrap:anywhere; }
-footer {
-  text-align:center; padding:24px; background:var(--navy); color:#c8e8e7;
-}
-.modal {
-  display:none; position:fixed; inset:0; z-index:10;
-  background:#061a2bdd; padding:18px;
-  align-items:center; justify-content:center;
-}
-.modal.show { display:flex; }
-.modal-card {
-  width:100%; max-width:650px; max-height:85vh; overflow:auto;
-  padding:24px; border-radius:18px; background:white; color:#102d35;
-}
-.modal-head { display:flex; justify-content:space-between; gap:12px; }
-.modal-head h2 { margin-top:0; }
-.close { border:0; border-radius:8px; padding:10px; background:#e3faf3; }
-.lyrics { white-space:pre-wrap; line-height:2; padding-top:12px; }
-@media(max-width:750px) {
-  .categories { grid-template-columns:repeat(2,1fr); }
-  .song-list { grid-template-columns:1fr; }
-  header { justify-content:center; }
-  nav { justify-content:center; }
-}
-@media(max-width:480px) {
-  .hero { padding:48px 15px; }
-  .search { flex-direction:column; background:transparent; }
-  .search input { border-radius:10px; min-height:48px; }
-  .search button { min-height:45px; }
-  .contact-grid { grid-template-columns:1fr; }
-  .song { padding:12px; }
-  .lyrics-btn { padding:8px; }
+@media(max-width:480px){
+ .nav{padding:13px 15px}
+ main{padding:30px 15px 45px}
+ .searchbox{flex-direction:column}
+ .searchbox input{min-height:46px}
+ .searchbox button{min-height:45px}
+ .section-head h2{font-size:25px}
+ .song{padding:13px;gap:9px}
+ .song-mark{width:36px;height:36px;flex-basis:36px}
+ .open-song{padding:8px}
+ .banner{align-items:flex-start;flex-direction:column;padding:22px}
+ .contact-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
-
-<header>
+<div id="app">
+<header class="topbar">
+<nav class="nav">
   <div class="brand">
-    <img class="logo" src="my%20lodo.jpeg" alt="Church logo"
-      onerror="this.style.display='none'">
+    <div class="logo">
+      <img src="my%20lodo.jpeg" alt="CRSS church logo" onerror="this.style.display='none';this.parentElement.textContent='♫'">
+    </div>
     <div>CRSS SONGS<small>TELUGU CHRISTIAN LYRICS</small></div>
   </div>
-  <nav>
+  <div class="navlinks">
     <a href="#songs">Songs</a>
-    <a href="#categories">Categories</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-  </nav>
+    <button class="navbtn" onclick="document.getElementById('search').focus()">Find a song ↗</button>
+  </div>
+</nav>
 </header>
 
 <section class="hero">
-  <div class="tag">SING • WORSHIP • PRAISE</div>
-  <h1>Every Song Brings<br>Us Closer to Worship</h1>
-  <p>తెలుగు క్రైస్తవ పాటల సాహిత్యం కోసం CRSS Songs కు స్వాగతం.
-  </p>
-  <div class="search">
-    <input id="search" type="search" placeholder="Search Telugu song lyrics...">
-    <button onclick="searchSongs()">Search Songs →</button>
+<div class="hero-inner">
+  <div class="eyebrow">Sing • Worship • Praise</div>
+  <h1>Every song brings<br>us closer to worship.</h1>
+  <p>Discover Telugu Christian songs, worship lyrics and timeless hymns — gathered in one simple place for your daily praise.</p>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="Search song title or lyrics…" aria-label="Search songs">
+    <button onclick="searchSongs()">Search songs →</button>
+  </div>
+  <div class="quick">
+    <button class="chip" onclick="quickSearch('యేసు')">యేసు Jesus</button>
+    <button class="chip" onclick="quickSearch('ఆరాధన')">ఆరాధన Worship</button>
+    <button class="chip" onclick="quickSearch('స్తుతి')">స్తుతి Praise</button>
+    <button class="chip" onclick="quickSearch('కృప')">కృప Grace</button>
+  </div>
+</div>
+</section>
+
+<main>
+<section id="songs">
+  <div class="section-head">
+    <div><div class="kicker">Start singing</div><h2>My Telugu Christian Songs</h2></div>
+    <span class="kicker" id="result-count">12 songs</span>
+  </div>
+
+  <div class="song-list" id="song-list">
+    <article class="song" data-search="విడువవు యేసయ్యా నను మరువవు యేసయ్యా viduvavu yesayya">
+      <div class="song-mark">♫</div><div class="song-info"><strong>విడువవు యేసయ్యా – నను మరువవు యేసయ్యా</strong><small>Viduvavu Yesayya · Telugu Christian Song</small></div>
+      <button class="open-song" onclick="openViduvavu()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="దేశమా నా దేశమా deshama naa deshama">
+      <div class="song-mark">✧</div><div class="song-info"><strong>దేశమా నా దేశమా</strong><small>Deshama Naa Deshama · Telugu</small></div>
+      <button class="open-song" onclick="openDeshama()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="నా నమ్మకం వమ్ము చేయవయ్యా నీవే నా ధైర్యమయ్యా naa nammakam">
+      <div class="song-mark">♡</div><div class="song-info"><strong>నా నమ్మకం వమ్ము చేయవయ్యా</strong><small>Naa Nammakam Vammu Cheyavayya</small></div>
+      <button class="open-song" onclick="openNammakam()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="ఉరుకులు పరుగుల జీవితం urukulu parugula">
+      <div class="song-mark">☼</div><div class="song-info"><strong>ఉరుకులు పరుగుల జీవితం</strong><small>Urukulu Parugula Jeevitham</small></div>
+      <button class="open-song" onclick="openUrukulu()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="మార్చినావు దేవా నా జీవితమును marchinavu">
+      <div class="song-mark">♫</div><div class="song-info"><strong>మార్చినావు దేవా నా జీవితమును</strong><small>Marchinavu Deva Naa Jeevitham</small></div>
+      <button class="open-song" onclick="openMarchinavu()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="గుణవతి అయిన భార్య gunavathi">
+      <div class="song-mark">✦</div><div class="song-info"><strong>గుణవతి అయిన భార్య</strong><small>Gunavathi Ayina Bharya</small></div>
+      <button class="open-song" onclick="openGunavathi()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్త prakatisthunnava">
+      <div class="song-mark">✝</div><div class="song-info"><strong>ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్త</strong><small>Prakatisthunnava Prabhu Rakshana Suvaarthana</small></div>
+      <button class="open-song" onclick="openPrakatisthunnava()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="ఎరుగకుంటిని యేసయ్యా erugakuntini">
+      <div class="song-mark">♫</div><div class="song-info"><strong>ఎరుగకుంటిని యేసయ్యా</strong><small>Erugakuntini Yesayya</small></div>
+      <button class="open-song" onclick="openErugakuntini()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="ఏలా మరువగలను నీ మేలులను ela maruvagalanu">
+      <div class="song-mark">♡</div><div class="song-info"><strong>ఏలా మరువగలను నీ మేలులను</strong><small>Ela Maruvagalanu Nee Melulanu</small></div>
+      <button class="open-song" onclick="openElaMaruvagalanu()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="లోకానేలే లోకనాథుడు lokanele loka nathudu">
+      <div class="song-mark">✦</div><div class="song-info"><strong>లోకానేలే లోకనాథుడు</strong><small>Lokanele Loka Nathudu · Christmas</small></div>
+      <button class="open-song" onclick="openLokanele()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="జన్మించినాడు ప్రభువైన యేసు janminchinadu">
+      <div class="song-mark">✧</div><div class="song-info"><strong>జన్మించినాడు ప్రభువైన యేసు</strong><small>Janminchinadu Prabhuvaina Yesu · Christmas</small></div>
+      <button class="open-song" onclick="openJanminchinadu()">Lyrics ↗</button>
+    </article>
+    <article class="song" data-search="విడదీయలేనిది నా యేసుని అనురాగం vidadeeyalenidi">
+      <div class="song-mark">♡</div><div class="song-info"><strong>విడదీయలేనిది – నా యేసుని అనురాగం</strong><small>Vidadeeyalenidi · Telugu Christian Song</small></div>
+      <button class="open-song" onclick="openVidadeeyalenidi()">Lyrics ↗</button>
+    </article>
+    <div class="empty" id="empty">No matching songs. Try another title or keyword.</div>
   </div>
 </section>
 
-
-
-  <section id="songs" style="margin-top:42px">
-    <div class="heading">
-      <small>CRSS SONGS LIBRARY</small>
-      <h2>Telugu Christian Songs</h2>
-      <p id="count">12 songs</p>
-    </div>
-
-    <div class="song-list" id="song-list">
-      <article class="song" data-search="విడువవు యేసయ్యా నను మరువవు యేసయ్యా యేసయ్యా">
-        <div class="song-icon">♫</div><div class="song-info">
-        <strong>విడువవు యేసయ్యా – నను మరువవు యేసయ్యా</strong>
-        <small>Viduvavu Yesayya</small></div>
-       
-/* Fix all CRSS Songs Lyrics buttons */
-document.addEventListener("click", function (event) {
-  const link = event.target.closest(".open-song");
-
-  if (!link) return;
-
-  const card = link.closest(".song");
-  if (!card) return;
-
-  event.preventDefault();
-
-  const titleElement = card.querySelector(".song-info strong");
-  const title = titleElement
-    ? titleElement.textContent.trim()
-    : "Song Lyrics";
-
-  // Find the function named in the button's onclick attribute
-  const onclickCode = link.getAttribute("onclick") || "";
-  const match = onclickCode.match(
-    /(open[A-Za-z0-9_]+)\s*\(/
-  );
-
-  if (match) {
-    const functionName = match[1];
-    const songFunction = window[functionName];
-
-    if (typeof songFunction === "function") {
-      songFunction();
-      return;
-    }
-  }
-
-  // Fallback: open the lyrics popup
-  if (typeof window.showLyrics === "function") {
-    window.showLyrics(title, "");
-  } else if (typeof window.openSong === "function") {
-    window.openSong(title);
-  } else {
-    alert("Lyrics popup could not open. Please check the JavaScript code.");
-  }
-});
-
-
-      <article class="song" data-search="దేశమా నా దేశమా">
-        <div class="song-icon">✧</div><div class="song-info">
-        <strong>దేశమా నా దేశమా</strong><small>Deshama Naa Deshama</small></div>
-        
-/* Fix all CRSS Songs Lyrics buttons */
-document.addEventListener("click", function (event) {
-  const link = event.target.closest(".open-song");
-
-  if (!link) return;
-
-  const card = link.closest(".song");
-  if (!card) return;
-
-  event.preventDefault();
-
-  const titleElement = card.querySelector(".song-info strong");
-  const title = titleElement
-    ? titleElement.textContent.trim()
-    : "Song Lyrics";
-
-  // Find the function named in the button's onclick attribute
-  const onclickCode = link.getAttribute("onclick") || "";
-  const match = onclickCode.match(
-    /(open[A-Za-z0-9_]+)\s*\(/
-  );
-
-  if (match) {
-    const functionName = match[1];
-    const songFunction = window[functionName];
-
-    if (typeof songFunction === "function") {
-      songFunction();
-      return;
-    }
-  }
-
-  // Fallback: open the lyrics popup
-  if (typeof window.showLyrics === "function") {
-    window.showLyrics(title, "");
-  } else if (typeof window.openSong === "function") {
-    window.openSong(title);
-  } else {
-    alert("Lyrics popup could not open. Please check the JavaScript code.");
-  }
-});
-
-
-      <article class="song" data-search="నా నమ్మకం వమ్ము చేయవయ్యా నమ్మకం యేసయ్యా ధైర్యము">
-        <div class="song-icon">♡</div><div class="song-info">
-        <strong>నా నమ్మకం వమ్ము చేయవయ్యా</strong>
-        <small>Naa Nammakam Vammu Cheyavayya</small></div>
-        <button class="lyrics-btn" onclick="openSong('nammakam')">Lyrics</button>
-      </article>
-
-      <article class="song" data-search="ఉరుకులు పరుగుల జీవితం పరలోకం">
-        <div class="song-icon">☼</div><div class="song-info">
-        <strong>ఉరుకులు పరుగుల జీవితం</strong>
-        <small>Urukulu Parugula Jeevitham</small></div>
-       
-/* Fix all CRSS Songs Lyrics buttons */
-document.addEventListener("click", function (event) {
-  const link = event.target.closest(".open-song");
-
-  if (!link) return;
-
-  const card = link.closest(".song");
-  if (!card) return;
-
-  event.preventDefault();
-
-  const titleElement = card.querySelector(".song-info strong");
-  const title = titleElement
-    ? titleElement.textContent.trim()
-    : "Song Lyrics";
-
-  // Find the function named in the button's onclick attribute
-  const onclickCode = link.getAttribute("onclick") || "";
-  const match = onclickCode.match(
-    /(open[A-Za-z0-9_]+)\s*\(/
-  );
-
-  if (match) {
-    const functionName = match[1];
-    const songFunction = window[functionName];
-
-    if (typeof songFunction === "function") {
-      songFunction();
-      return;
-    }
-  }
-
-  // Fallback: open the lyrics popup
-  if (typeof window.showLyrics === "function") {
-    window.showLyrics(title, "");
-  } else if (typeof window.openSong === "function") {
-    window.openSong(title);
-  } else {
-    alert("Lyrics popup could not open. Please check the JavaScript code.");
-  }
-});
-
-      <article class="song" data-search="మార్చినావు దేవా నా జీవితమును">
-        <div class="song-icon">♫</div><div class="song-info">
-        <strong>మార్చినావు దేవా నా జీవితమును</strong>
-        <small>Marchinavu Deva</small></div>
-        
-/* Fix all CRSS Songs Lyrics buttons */
-document.addEventListener("click", function (event) {
-  const link = event.target.closest(".open-song");
-
-  if (!link) return;
-
-  const card = link.closest(".song");
-  if (!card) return;
-
-  event.preventDefault();
-
-  const titleElement = card.querySelector(".song-info strong");
-  const title = titleElement
-    ? titleElement.textContent.trim()
-    : "Song Lyrics";
-
-  // Find the function named in the button's onclick attribute
-  const onclickCode = link.getAttribute("onclick") || "";
-  const match = onclickCode.match(
-    /(open[A-Za-z0-9_]+)\s*\(/
-  );
-
-  if (match) {
-    const functionName = match[1];
-    const songFunction = window[functionName];
-
-    if (typeof songFunction === "function") {
-      songFunction();
-      return;
-    }
-  }
-
-  // Fallback: open the lyrics popup
-  if (typeof window.showLyrics === "function") {
-    window.showLyrics(title, "");
-  } else if (typeof window.openSong === "function") {
-    window.openSong(title);
-  } else {
-    alert("Lyrics popup could not open. Please check the JavaScript code.");
-  }
-});
-
-
-      <article class="song" data-search="గుణవతి అయిన భార్య గుణవతి">
-        <div class="song-icon">✦</div><div class="song-info">
-        <strong>గుణవతి అయిన భార్య</strong><small>Gunavathi Ayina Bharya</small></div>
-        
-/* Fix all CRSS Songs Lyrics buttons */
-document.addEventListener("click", function (event) {
-  const link = event.target.closest(".open-song");
-
-  if (!link) return;
-
-  const card = link.closest(".song");
-  if (!card) return;
-
-  event.preventDefault();
-
-  const titleElement = card.querySelector(".song-info strong");
-  const title = titleElement
-    ? titleElement.textContent.trim()
-    : "Song Lyrics";
-
-  // Find the function named in the button's onclick attribute
-  const onclickCode = link.getAttribute("onclick") || "";
-  const match = onclickCode.match(
-    /(open[A-Za-z0-9_]+)\s*\(/
-  );
-
-  if (match) {
-    const functionName = match[1];
-    const songFunction = window[functionName];
-
-    if (typeof songFunction === "function") {
-      songFunction();
-      return;
-    }
-  }
-
-  // Fallback: open the lyrics popup
-  if (typeof window.showLyrics === "function") {
-    window.showLyrics(title, "");
-  } else if (typeof window.openSong === "function") {
-    window.openSong(title);
-  } else {
-    alert("Lyrics popup could not open. Please check the JavaScript code.");
-  }
-});
-
-      <article class="song" data-search="ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్త">
-        <div class="song-icon">✝</div><div class="song-info">
-        <strong>ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్త</strong>
-        <small>Prakatisthunnava Prabhu</small></div>
-        
-/* Fix all CRSS Songs Lyrics buttons */
-document.addEventListener("click", function (event) {
-  const link = event.target.closest(".open-song");
-
-  if (!link) return;
-
-  const card = link.closest(".song");
-  if (!card) return;
-
-  event.preventDefault();
-
-  const titleElement = card.querySelector(".song-info strong");
-  const title = titleElement
-    ? titleElement.textContent.trim()
-    : "Song Lyrics";
-
-  // Find the function named in the button's onclick attribute
-  const onclickCode = link.getAttribute("onclick") || "";
-  const match = onclickCode.match(
-    /(open[A-Za-z0-9_]+)\s*\(/
-  );
-
-  if (match) {
-    const functionName = match[1];
-    const songFunction = window[functionName];
-
-    if (typeof songFunction === "function") {
-      songFunction();
-      return;
-    }
-  }
-
-  // Fallback: open the lyrics popup
-  if (typeof window.showLyrics === "function") {
-    window.showLyrics(title, "");
-  } else if (typeof window.openSong === "function") {
-    window.openSong(title);
-  } else {
-    alert("Lyrics popup could not open. Please check the JavaScript code.");
-  }
-});
-
-
-      <article class="song" data-search="ఎరుగకుంటిని యేసయ్యా">
-        <div class="song-icon">♫</div><div class="song-info">
-        <strong>ఎరుగకుంటిని యేసయ్యా</strong><small>Erugakuntini Yesayya</small></div>
-        <button class="lyrics-btn" onclick="openSong('erugakuntini')">Lyrics</button>
-      </article>
-
-      <article class="song" data-search="ఏలా మరువగలను నీ మేలులను">
-        <div class="song-icon">♡</div><div class="song-info">
-        <strong>ఏలా మరువగలను నీ మేలులను</strong>
-        <small>Ela Maruvagalanu</small></div>
-        <button class="lyrics-btn" onclick="openSong('ela')">Lyrics</button>
-      </article>
-
-      <article class="song" data-search="లోకానేలే లోకనాథుడు క్రిస్మస్">
-        <div class="song-icon">✦</div><div class="song-info">
-        <strong>లోకానేలే లోకనాథుడు</strong><small>Lokanele Loka Nathudu</small></div>
-        <button class="lyrics-btn" onclick="openSong('lokanele')">Lyrics</button>
-      </article>
-
-      <article class="song" data-search="జన్మించినాడు ప్రభువైన యేసు క్రిస్మస్">
-        <div class="song-icon">✧</div><div class="song-info">
-        <strong>జన్మించినాడు ప్రభువైన యేసు</strong>
-        <small>Janminchinadu Prabhuvaina Yesu</small></div>
-        <button class="lyrics-btn" onclick="openSong('janminchinadu')">Lyrics</button>
-      </article>
-
-      <div class="empty" id="empty">No songs found. Try another search.</div>
-    </div>
-  </section>
-
-  <section class="banner" id="about">
-    <h2>Welcome to CRSS Songs</h2>
-    <p>A growing collection of Telugu Christian songs for worship, praise and prayer.</p>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="heading"><small>STAY CONNECTED</small><h2>Connect with CRSS</h2></div>
-    <div class="contact-grid">
-      <div class="contact-item"><strong>YouTube</strong><br>
-        <a href="https://www.youtube.com/results?search_query=jojijm+official" target="_blank" rel="noopener">jojijm official ↗</a>
-      </div>
-      <div class="contact-item"><strong>Instagram</strong><br>
-        <a href="https://www.instagram.com/jojijm_official/" target="_blank" rel="noopener">@jojijm_official ↗</a>
-      </div>
-      <div class="contact-item"><strong>Contact number</strong><br>
-        <a href="tel:9392990562">9392990562</a>
-      </div>
-      <div class="contact-item"><strong>Additional contact</strong><br>
-        <a href="tel:6301261514">6301261514</a>
-      </div>
-    </div>
-  </section>
+<section class="banner" id="about">
+  <div><h3>Your next worship song is here.</h3><p>CRSS Songs is a growing collection for Telugu Christian music lovers.<br>Find a song, open the lyrics and sing along.</p></div>
+  <button class="primary-btn" onclick="document.getElementById('search').focus()">Explore songs →</button>
+</section>
+
+<section class="contact-section" id="contact">
+  <h2>Connect with CRSS</h2>
+  <p>Follow our official pages or use the public contact details below.</p>
+  <div class="contact-grid">
+    <div class="contact-item"><strong>YouTube</strong><a href="https://www.youtube.com/results?search_query=jojijm+official" target="_blank" rel="noopener noreferrer">jojijm official ↗</a><small>Search for the channel name</small></div>
+    <div class="contact-item"><strong>Instagram</strong><a href="https://www.instagram.com/jojijm_official/" target="_blank" rel="noopener noreferrer">@jojijm_official ↗</a></div>
+    <div class="contact-item"><strong>Public contact number</strong><a href="tel:9392990562">9392990562</a></div>
+    <div class="contact-item"><strong>Additional contact number</strong><a href="tel:6301261514">6301261514</a></div>
+  </div>
+</section>
 </main>
 
-<footer>© 2026 CRSS Songs · Telugu Christian Lyrics · Sing with faith ♡</footer>
+<footer>© 2026 CRSS Songs · Made to celebrate Telugu Christian worship</footer>
+</div>
 
-<div class="modal" id="modal" onclick="if(event.target===this)closeSong()">
+<div class="modal" id="song-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onclick="if(event.target===this)closeSong()">
   <div class="modal-card">
-    <div class="modal-head">
-      <h2 id="modal-title">Song lyrics</h2>
-      <button class="close" onclick="closeSong()">Close ✕</button>
-    </div>
-    <div class="lyrics" id="lyrics"></div>
+    <div class="modal-head"><div><div class="kicker">CRSS Songs library</div><h2 id="modal-title">Song title</h2></div><button class="close" onclick="closeSong()">Close ✕</button></div>
+    <p class="lyric-note">తెలుగు క్రైస్తవ గీతం · CRSS Songs</p>
+    <div class="lyric-placeholder" id="song-lyrics">♪ తెలుగు సాహిత్యం</div>
   </div>
 </div>
 
 <script>
-const songLyrics = {
-viduvavu: `విడువవు యేసయ్యా – నను మరువవు యేసయ్యా
+function searchSongs(){
+ const q=document.getElementById('search').value.trim().toLocaleLowerCase();
+ const cards=[...document.querySelectorAll('.song')];
+ let count=0;
+ cards.forEach(card=>{
+   const match=!q||(card.dataset.search+' '+card.innerText).toLocaleLowerCase().includes(q);
+   card.style.display=match?'flex':'none';
+   if(match)count++;
+ });
+ document.getElementById('empty').style.display=count?'none':'block';
+ document.getElementById('result-count').textContent=count+' '+(count===1?'song':'songs');
+}
+function quickSearch(q){
+ document.getElementById('search').value=q;
+ searchSongs();
+ document.getElementById('songs').scrollIntoView({behavior:'smooth'});
+}
+function showLyrics(title,lyrics){
+ document.getElementById('modal-title').textContent=title;
+ document.getElementById('song-lyrics').textContent=lyrics||'ఈ పాట యొక్క పూర్తి సాహిత్యం ఇంకా చేర్చలేదు.';
+ document.getElementById('song-modal').classList.add('show');
+}
+function openViduvavu(){
+ showLyrics('విడువవు యేసయ్యా – నను మరువవు యేసయ్యా',`విడువవు యేసయ్యా – నను మరువవు యేసయ్యా
 
-కాలాలు మారినాగాని – యుగాలు గడిచిన గాని
-ఎందరూ నన్ను విడిచినా – నా వారే మరిచినా
-విడువలేదు నీ కృప – మరువలేదు నీ కరుణా
+కాలాలు మారినాగాని – యుగాలు గడిచిన గాని || 2 ||
+యెడబాయలేదయ్య న – నీ కృపా బాహుళ్యం || 2 ||
+ఎందరూ నన్ను విడిచినా – నా వారే మరిచినా || 2 ||
+విడువలేదు నీ కృప – మరువలేదు నీ కరుణా || 2 ||
 
 || విడువవు యేసయ్యా ||
 
-పూర్తి పాట సాహిత్యాన్ని ఇక్కడ మీకు కావలసిన విధంగా చేర్చండి.`,
+1. ఒకని తల్లి వానిని ఆవరించునట్లు
+నేను నిన్ను ఆదరించి ఆదుకొందునంటివే
+స్త్రీ తన గర్భమున పుట్టిన బిడ్డను
+మరిచిన మరుచునేమో నేను మరువనంటివే || 2 ||
 
-deshama: `దేశమా... దేశమా... నా దేశమా
+చూడుము నా అరచేతిలో చెక్కుకుంటినంటివే
+నీ రూపం నా మదిలో చెరగని చిత్రమని || 2 ||
+
+బలపరచిన యేసయ్యా – నీవే చాలునయ్యా
+కృపగల యేసయ్యా – నీవే సర్వమయ్య || 2 ||
+
+|| విడువవు యేసయ్యా ||
+
+2. ఒంటరియైనవాడు – వేయిమందియగును
+ఎన్నికలేనివాడు – బలమైన జనమగును
+షండుని సయతము – ఎండిన చెట్టుగ నుంచక
+శ్రేష్టమైన పేరును – వారికిత్తునంటివి || 2 ||
+
+కొడుకలు, కూతుళ్ళు అనిపించుకొనుటకంటే
+కొట్టివేయబడని – స్థానం వారిదని || 2 ||
+
+దైర్యపరచిన యేసయ్యా – నీవే శరాణయ్య
+దృఢపరచిన యేసయ్యా – నీవే ధైర్యమయ్య || 2 ||
+
+|| విడువవు యేసయ్యా ||
+
+3. పర్వతములు తొలగిన – మెట్టలు తత్తరిల్లిన
+నా కృప నిన్ను – విడసిపోదంటివి
+భూమి కంటే ఆకాశం – ఎంత ఉన్నతమో
+నా కృప నీ యెడల – అంత అధికమంటివి || 2 ||
+
+ఆకాశమును, భూమియు గతించుట జరిగినను
+నా మాటలు ఎన్నడునూ – గతించుట జరగదని || 2 ||
+
+సెలవిచ్చిన యేసయ్యా – నీవే సత్యమయ్య
+తరములు గడచినను – ఎన్నాడు తప్పవయ్య || 2 ||
+
+|| విడువవు యేసయ్యా ||`);
+}
+function openDeshama(){
+ showLyrics('దేశమా నా దేశమా',`దేశమా... దేశమా... నా దేశమా
 దేవుని మాట వినుమా
 
 నేస్తమా... నేస్తమా... నా నేస్తమా
 దేవునికి లోబడుమా
 
-పూర్తి పాట సాహిత్యాన్ని ఇక్కడ చేర్చండి.`,
+ఆలకించుమా... ఆలోచించుమా
+సమయమిదియే..... సిద్ధపడుమా ||2||
 
-nammakam: `నా నమ్మకం వమ్ము చేయవయ్య
-నీవే నా ధైర్యమయ్యా
+|| దేశమా ||
+
+1. కోడి తన పిల్లలనె లాగు చేర్చుకొనునో
+ఎన్నిమారులో నీకై తన కరములు చాపగా
+
+ఇంత కఠినమేల నా దేశమా
+నిజ దేవుని పైనే నీ వ్యాజ్యమా ||2||
+
+2. కులం మతం ప్రాంతమంటూ
+విద్వేషం కలిగించి
+సోదరభావం మరచి
+చితిమంటలు రగిలించి
+
+ఇంత ద్వేషమేల నా దేశమా
+దేవుని పైనే నీ పంతమా ||2||
+
+3. తల్లి తన బిడ్డలను గారవించు రీతిగా
+నీపై మమకారంతో తన కౌగిలి పంచగా
+
+నిజ దేవుని ప్రేమనే మరతువా?`);
+}
+function openNammakam(){
+ showLyrics('నా నమ్మకం వమ్ము చేయవయ్యా',`నా నమ్మకం వమ్ము చేయవయ్య నీవే నా ధైర్యమయ్య!
+వేరెవరూ నాకు లేరయ్యా నీవే ఆధారమయ్యా!
+నీవు నా నాకుండగా, నీవే నా అండగా,
+విడువను నేనెన్నడూ నీ పాద సన్నిధి.
 
 నా నమ్మకం నీవే యేసయ్యా!
 నా ధైర్యము నీవే యేసయ్యా!
 నా బలము నీవే యేసయ్యా!
-నా విజయము నీవే యేసయ్యా!`,
+నా విజయము నీవే యేసయ్యా!
 
-urukulu: `ఉరుకులు పరుగుల జీవితం అయినా
+|| నా నమ్మకం వమ్ము చేయవయ్య ||
+
+1. గానుగ చాటున గిద్యోను గోధుమలను దుల్లగొట్టుచుండగా,
+మిధ్యానీయుల హస్తబలముచే ప్రజలందరూ పారిపోవుచుండగా,
+పరాక్రమము గల బలాడ్యుడా నా తోడు నీకు చాలునంటివే.
+
+2. గాతు వాడైన గొల్యాతు గర్జన చేయుచుండగా,
+దావీదు ఒడిశల రాయికి ఒరిగిపో జేసితివే.
+నమ్మదగిన దేవుడవు నీవయ్యా నాకు చాలిన నాధుడవు యేసయ్య.
+
+3. అయోగ్యుడనైన నన్ను పేరు పెట్టి పిలిచితివే,
+అంధకారలోకము నుండి నన్ను వేరు చేసితివే.
+ఎక్కలేని ఎత్తయిన కొండకు ఎక్కించితివే
+ఎన్నెన్నో మేలులతో నన్ను దీవించితివే.`);
+}
+function openUrukulu(){
+ showLyrics('ఉరుకులు పరుగుల జీవితం',`పల్లవి
+
+ఉరుకులు పరుగుల జీవితం అయినా
 అది క్షణ భంగురం
 
 ఉన్నది నీకై పరలోకం
-నిలువరమైనది ఆలోకం
+నిలువరమైనది ఆలోకం || 2 ||
 
 విన్నావంటే ప్రభుమాట
-ఆనందంతో ఆరాధించు.`,
+చింతలే ఉండవు చిరకాలం
 
-marchinavu: `మార్చినావు దేవా నా జీవితమును
-ఓర్చినావు ప్రభువా నాకై శ్రమలు
+ఆనందంతో అనుదినం
+ఆరాధించువు ఆయనతో || 2 ||
 
+|| ఉరుకులు ||
+
+1. ఒట్టిదానికై ఆరాటం
+మంటి ఘటములో పోరాటం
+
+నీడవంటి నీ జీవితం
+నిలువదు ఇలలో కలకాలం || 2 ||
+
+2. చూచుచుంటివా లోకాన్ని
+బ్రతుకుపోరులో భారాన్ని
+
+కోటి విద్యలు కూటికే
+చివరకి చేరేది కాటికే || 2 ||
+
+3. ప్రయాసపడుచు భారము
+మోయుచునున్నవారలూ
+
+నా యొద్దకు రారండి
+నెమ్మది నీత్వను నిజమండి || 2 ||`);
+}
+function openMarchinavu(){
+ showLyrics('మార్చినావు దేవా నా జీవితమును',`మార్చినావు దేవా నా జీవితమును
+ఓర్చినావు ప్రభువా నాకై శ్రమలు || 2 ||
 కార్చినావు దేవా నాకై రుధిరము
-చేసినావు నీదు ప్రాణ త్యాగము`,
+చేసినావు నీదు ప్రాణ త్యాగము || 2 ||
 
-gunavathi: `గుణవతియైన భార్య దొరుకుట అరుదు
-సౌందర్యవంతులెందరినో మించిన మెరుగు
+|| మార్చినావు దేవా ||
 
-ఇది మనుష్యుని కార్యము కాదు
-దేవుని వరమే.`,
+1. పాప శాప కూపములో పడియుండగా
+నీతి న్యాయమెరుగక నేనుండగా || 2 ||
+నా నీతికి ఆధారమైయున్న ప్రభువా
+నీ నీతిగా నన్ను మార్చినావుగా || 2 ||
 
-prakatisthunnava: `ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్తను
-నిదురిస్తున్నావా నీ భారమును మరచి
+2. బంధాలు బంధువులు దూరమవ్వగా
+ఒలిక్కసి చెట్టు వలె నేనుండగా || 2 ||
+బలియాగమై నన్ను బ్రతికించితివి
+వాడవాడలా నిన్ను ప్రకటింపగా || 2 ||`);
+}
+function openGunavathi(){
+ showLyrics('గుణవతి అయిన భార్య',`దైవమే తలంచెను దయతో - దానముగా ఇచ్చెను ఇలలో
 
+పల్లవి:
+గుణవతియైన భార్య - దొరుకుట అరుదు
+సౌందర్యవంతులెందరినో - మించిన మెరుగు
+వెలగల ముత్యములే - వెలసిపోవునామె యెదుట ||2||
+ఇది మనుష్యుని కార్యము కాదు - దేవుని వరమే ||2||
+
+1. భార్యదొరికిన వానికి - మేలు దొరికెను
+ఇది దేవుని వలనైన - అనుగ్రహమే ||2||
+
+2. ఒంటరిగా నరుడు ఉండరాదని
+జంటగా నుండుటే - ఎంతో మేలని ||2||
+
+3. అందం మోసకరం - సౌందర్యం వ్యర్థం
+యెహోవా యందలి భయం - ఎంతో మేలు ||2||`);
+}
+function openPrakatisthunnava(){
+ showLyrics('ప్రకటిస్తున్నావా ప్రభు రక్షణ సువార్త',`ప్రకటిస్తున్నావా! ప్రభు రక్షణ సువార్తను
+నిదురిస్తున్నావా! నీ భారమును మరచి ||2||
+
+వడివడిగా దినములు పరుగులిడు చుండగా
 ప్రభు రాకడ ఘడియలు మారుమ్రోగుచుండగా
-ప్రభు సేవలో సిద్ధపడుమా.`,
 
-erugakuntini: `ఎరుగకుంటిని యేసయ్యా
-ఎంతగా నిను ద్వేషించితినో
+నిదురిస్తున్నావా భారమును మరచి!
+రాకడ దినములని యెరుగకయున్నావా! ||2||
+
+|| ప్రకటిస్తున్నావా ||
+
+1. నశియించిన దానిని వెదకి రక్షించుటకే
+నజరేయుడేసు నరరూపి ఆయెను ||2||
+
+2. అపవాది కార్యములు అంతమొందించుటకే
+ఆది దేవుడే మానవుడై అరుదెంచగా`);
+}
+function openErugakuntini(){
+ showLyrics('ఎరుగకుంటిని యేసయ్యా',`ఎంతగా నిను ద్వేషించితినో
 అంతగా నను ప్రేమించితివే యేసయ్యా
 
-మరువలేను యేసయ్యా నీ ప్రేమను.`,
+ఎరుగకుంటిని యేసయ్య నీవెవరో ఇంతకాలం
+వినక యుంటిని నీ వాక్యం నా మూర్ఖపు అజ్ఞానముతో ||2||
 
-ela: `ఎలా మరువ గలను నీ మేలులన్
+దేవుడవే కాదనుచు దైవత్వమే లేదనుచు
+ఎంతగా నిను ద్వేషించితినో
+అంతగా నను ప్రేమించితివి ||2||
+
+మరువలేను యేసయ్యా నీ ప్రేమను
+విడువకుందున యేసయ్యా నీ పాదములు
+
+1. నా కాలగతులు నీ వశమైయున్నవని
+నీ చేతితోనే నన్ను నిర్మించితివని
+
+2. ఆ భూమ్యాకాశములు నీ చేతి పనులని
+నీ మాటతోనే వాటిని కలిగించితివని
+
+3. పాపినైన నాకై పరలోకం విడిచితివి
+ప్రాణమే అర్పించి రక్షణనిచ్చితివి`);
+}
+function openElaMaruvagalanu(){
+ showLyrics('ఏలా మరువగలను నీ మేలులను',`ఎలా మరువ గలను నీ మేలులన్
 ఎలా తీర్చగలను నీ ఋణమును
 
-నా యేసయ్య నీదు కృపను
-నీ మేలులను తలపోయుదున్.`,
+ఎలా పాడగలను నీ కృపలను
+ఎలా కూర్చగలను సరాగాలు
 
-lokanele: `లోకాలనేలే లోక నాథుడు
+మణులు మాణిక్యములిత్తునా
+మేడం మిద్దెలు మరి తీర్చునా? || 2 ||
+
+1. గడిచిన కాలం నీదు కృపతో
+నన్ను కాపాడినా
+కష్టకాలం, దుఃఖం సమయం
+నన్ను వెన్నంటినా || 2 ||
+
+నా యేసయ్య నీదు కృపను
+నీ మేలులను తలపోయుదున్
+
+2. ఏ యోగ్యతయు లేని నాకై
+పరమును వీడినా
+మహిమను విడచి మనుజావతారిగా
+భువికి దిగివచ్చినా || 2 ||
+
+3. మార్గము సత్యము జీవమునైన
+నిన్నే స్తుతియింతును`);
+}
+function openLokanele(){
+ showLyrics('లోకానేలే లోకనాథుడు',`లోకాలనేలే లోక నాథుడు
 రాజ్యాల నేలే రారాజుడు
 
 జన్మించెను ఈ జగతిలోన
-పాలించెను పశువుల పాకనా.`,
+పాలించెను పశువుల పాకనా || 2 ||
 
-janminchinadu: `జన్మించినాడు ప్రభువైన యేసు
+రారె జనులారా... రాజును మ్రొక్కుటకు
+వేగమే రారండి... యేసును వేడుకకు || 2 ||
+
+1. మన చీకటి బ్రతుకులు మార్చగను
+మన దీపము వెలిగించెను || 2 ||
+
+2. మార్గము, సత్యము, జీవముగా
+మన పాపములు బాపు పరిశుద్ధునిగా || 2 ||
+
+3. సాతాను సామ్రాజ్యం కూల్చుటకు
+సంఘాన్ని స్థాపించి స్థిరపరచుటకు || 2 ||`);
+}
+function openJanminchinadu(){
+ showLyrics('జన్మించినాడు ప్రభువైన యేసు',`జన్మించినాడు ప్రభువైన యేసు
 భువిలోన మహారాజుగా
 
 ఉదయించినాడు కాపరి దైవం
-నా హృదయ రారాజుగా.`
-};
+నా హృదయ రారాజుగా
 
-function searchSongs() {
-  const q = document.getElementById('search').value.trim().toLocaleLowerCase();
-  let count = 0;
-  document.querySelectorAll('.song').forEach(song => {
-    const match = !q || (song.dataset.search + ' ' + song.innerText)
-      .toLocaleLowerCase().includes(q);
-    song.style.display = match ? 'flex' : 'none';
-    if (match) count++;
-  });
-  document.getElementById('empty').style.display = count ? 'none' : 'block';
-  document.getElementById('count').textContent = count + ' songs';
+అరుదెంచె భువికి అరుణోదయమున
+అందరికి ప్రభువుగా
+
+పరవశించి పాడుదాం
+స్తుతించి వేడుదాం
+కీర్తించి పొగడుదాం
+కొనియాడి పాడుదాం
+
+1. చీకటిలో జనులు గొప్ప వెలుగు చూచిరి
+మరణ ఛాయ లోకంలో మహిమ కాంతి నిండెను || 2 ||
+
+2. అరణ్య రోదన ఆవిరైపోయెను
+దుఃఖము, నిట్టూర్పు దూరమైపోయెను || 2 ||
+
+3. నిందలకు ప్రతిగా రెట్టింపు ఘనత
+అవమానము ప్రతిగా ఆనంద తైలము || 2 ||`);
 }
-function quickSearch(q) {
-  document.getElementById('search').value = q;
-  searchSongs();
-  document.getElementById('songs').scrollIntoView({behavior:'smooth'});
+function openVidadeeyalenidi(){
+ showLyrics('విడదీయలేనిది – నా యేసుని అనురాగం',`పల్లవి
+
+విడదీయలేనిది నీతో నా అనుబంధం
+ఎడబాయలేనిది నా యేసుని అనురాగం
+
+1. యుగములెన్ని గడచినా తరములెన్ని మారినా
+మారనే మారదు వీడనే వీడదు
+
+నీతో నా అనుబంధం నాతో నీ అనురాగం
+విడదీయలేనిది నీతో నా అనుబంధం
+ఎడబాయలేనిది నా యేసుని అనురాగం
+
+2. గర్భవాసినైనది మొదలుకొని
+నా పోషకుడవై నీవుంటివే
+నా తల్లి గర్భములో నన్ను
+నిర్మించినవాడవు నీవే దేవా
+
+తల్లి కన్నా తండ్రి కన్నా
+మిన్నగా ప్రేమించితివే
+
+3. పాపినైన నన్ను వెదకి రక్షించుటకు
+పరలోక సౌభాగ్యము విడనాడితివి
+మనుష్యుల పోలికగా పుట్టి
+దాసుని స్వరూపమునే ధరియించితివి
+
+నీవు గాక ఇంకెవరైనా
+ఇంతగా ప్రేమించగలరా?
+
+విడదీయలేనిది నీతో నా అనుబంధం
+ఎడబాయలేనిది నా యేసుని అనురాగం`);
 }
-function openSong(key) {
-  const song = document.querySelector('[onclick="openSong(\\'' + key + '\\')"]');
-  document.getElementById('modal-title').textContent =
-    song ? song.closest('.song').querySelector('strong').innerText : 'Song Lyrics';
-  document.getElementById('lyrics').textContent = songLyrics[key] || 'Lyrics will be added soon.';
-  document.getElementById('modal').classList.add('show');
+function closeSong(){
+ document.getElementById('song-modal').classList.remove('show');
 }
-function closeSong() {
-  document.getElementById('modal').classList.remove('show');
-}
-document.getElementById('search').addEventListener('input', searchSongs);
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeSong();
-  if (e.key === 'Enter' && document.activeElement.id === 'search') searchSongs();
+document.getElementById('search').addEventListener('input',searchSongs);
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape')closeSong();
+ if(e.key==='Enter'&&document.activeElement.id==='search')searchSongs();
 });
 </script>
 </body>
